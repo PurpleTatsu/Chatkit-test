@@ -3,11 +3,13 @@ import ChatMessage from './components/ChatMessage';
 import Signup from './components/Signup';
 import ChatApp from './components/ChatApp';
 
-const Chatkit = require("@pusher/chatkit-server");
-const chatkit = new Chatkit.default({
+import { default as Chatkit } from '@pusher/chatkit-server';
+
+const chatkit = new Chatkit({
   instanceLocator: "v1:us1:89fdb86d-cf32-4bd6-a2f8-5285114c23a4",
   key: "2ff86d58-869f-4bf7-81e2-3f473aa52533:akQRoLIESjCO8l3m5j3rYYXsHpMt3KhfnwIzkAuZTQo="
-});
+})
+
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +22,6 @@ class App extends Component {
     this.changeView = this.changeView.bind(this);
     this.createUser = this.createUser.bind(this);
   }
-
   createUser(username) {
     chatkit.createUser({
       id: username,
@@ -53,9 +54,10 @@ class App extends Component {
 
   render() {
     let view = '';
+
     if (this.state.currentView === "ChatMessage") {
       view = <ChatMessage changeView={this.changeView} />
-    } else if (this.state.currentView === "Signup") {
+    } else if (this.state.currentView === "signup") {
       view = <Signup onSubmit={this.createUser} />
     } else if (this.state.currentView === "chatApp") {
       view = <ChatApp currentId={this.state.currentId} />
