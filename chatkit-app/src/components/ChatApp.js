@@ -31,7 +31,7 @@
                   this.setState({ currentUser: currentUser })
                   return currentUser.subscribeToRoom({
                       roomId: "fdbb85de-3084-457d-b6ab-561a4cad3e54",
-                      messageLimit: 100,
+                      messageLimit: 50,
                       hooks: {
                           onMessage: message => {
                               this.setState({
@@ -60,7 +60,7 @@
       render() {
           return (
               <div>
-                  <h2 className="header">Hi There, Ask us anything</h2>
+                  <h2 className="header">Aloha! Start chatting here.</h2>
                   <MessageList messages={this.state.messages} />
                   <Input className="input-field" onSubmit={this.addMessage} />
               </div>
