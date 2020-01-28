@@ -19,7 +19,7 @@ class Signup extends Component {
     render() {
         return (
             <div className="form-container">
-                <h1>Let's Talk</h1>
+                <h1>Let's Talk!</h1>
                 <form onSubmit={this.handleSubmit} className="form">
                     <label htmlFor="email">What is your email?</label>
                     <input type="email" name="username" onChange={this.handleChange} className="input" />

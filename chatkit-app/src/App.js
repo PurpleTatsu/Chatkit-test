@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect, useRef } from 'react';
 import ChatMessage from './components/ChatMessage';
 import Signup from './components/Signup';
 import ChatApp from './components/ChatApp';
+import Footer from './components/Footer';
+// import React, { useState, useEffect, useRef } from "react";
+
 
 import { default as Chatkit } from '@pusher/chatkit-server';
 
@@ -51,10 +54,15 @@ class App extends Component {
       currentView: view
     })
   }
-
+  
   render() {
     let view = '';
-
+    // const messagesEndRef = useRef(null);
+    // const scrollToBottom = () => {
+    //   messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+    // };
+    // useEffect(scrollToBottom, [view]);
+    
     if (this.state.currentView === "ChatMessage") {
       view = <ChatMessage changeView={this.changeView} />
     } else if (this.state.currentView === "signup") {
@@ -65,6 +73,7 @@ class App extends Component {
     return (
       <div className="App">
         {view}
+        <footer>footer </footer>
       </div>
     );
   }
