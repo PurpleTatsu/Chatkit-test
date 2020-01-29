@@ -64,9 +64,11 @@ class ChatApp extends Component {
   }
   render() {
     return (
-      <div>
-        <img id="dino" src="https://imgur.com/a/ULdUvgy"/>
+      <div className="header">
+        <div id="header-title">
+        <img id="dino" src="https://github.com/PurpleTatsu/Chatkit-test/blob/master/chatkit-app/src/images/dino%20sticker%20GA.png?raw=true"/>
         <h2 className="header">Aloha! Start chatting here.</h2>
+        </div>
         <MessageList messages={this.state.messages} />
         <Input className="input-field" onSubmit={this.addMessage} />
       </div>

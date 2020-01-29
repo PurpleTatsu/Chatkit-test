@@ -73,7 +73,6 @@ class App extends Component {
     return (
       <div className="App">
         {view}
-        <footer>footer </footer>
       </div>
     );
   }
