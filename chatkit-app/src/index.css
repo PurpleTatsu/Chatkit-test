@@ -127,7 +127,7 @@ html{
   display: flex;
   flex-direction: column;
   border: 1px black solid;
-  min-height: 70vh;
+  height: 70vh;
   max-height: 80vh;
 
   overflow: scroll;
@@ -135,7 +135,7 @@ html{
   list-style-type: none;
   padding: 0px 20px;
 
-  max-height: calc(100vh - 150px);
+  /* max-height: calc(100vh - 150px); */
 }
 .message-input{
   width: 100%;
@@ -173,6 +173,7 @@ html{
 }
 #header-title{
   width: 100%;
+  height: 20vh;
   display: flex;
   flex-wrap: wrap;
   background: #C9FB9C;
@@ -185,7 +186,7 @@ html{
   font-family: 'Amatic SC', cursive;
 }
 #dino{
-  height: 10rem;
+  height: 8rem;
   width: auto;
 }
 .message-submit  {

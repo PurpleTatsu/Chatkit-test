@@ -13,10 +13,8 @@ class MessageList extends Component {
 
           <li key={index} className="cont" ref={(ref) => this.messages = ref}>
             <ScrollIntoView selector={index}>
-              <h4 className="message-sender">{message.senderId}<span style={{
-                color: "green"
-              }} className="hero-health"> ({heroHealth})</span></h4>
-
+              <h4 className="message-sender">{message.senderId}</h4>
+{/* javascript logic within interpolation */}
               <p className="message-text">{message.text}</p>
 
             </ScrollIntoView>
