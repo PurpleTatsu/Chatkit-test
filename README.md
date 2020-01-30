@@ -1,8 +1,10 @@
 # Chatkit-test
 
-Goal: To create and test a chat app.
-Using the 3rd party service "Pusher": https://pusher.com/tutorials/messaging-react-chatkit#displaying-messages
+http://dino-chat.surge.sh/
+
+**Goal:** To create and test a chat app.
+Using the 3rd party service Pusher's [ChatKit](https://pusher.com/chatkit).
 
 
-## Issues:
-ChatApp.js: `messageLimit` limits only after refresh
+## Current challenges:
+- Chat screen resets to top of screen as opposed to most recent message at bottom
